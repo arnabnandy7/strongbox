@@ -119,7 +119,7 @@ public class EntityTraversalUtils
     }
 
     static <E2> void info(String action,
-                                 Traverser<E2> t)
+                          Traverser<E2> t)
     {
         EntityTraversalDsl.logger.info(String.format("%s [%s]-[%s]-[%s]",
                                                      action,
@@ -130,7 +130,7 @@ public class EntityTraversalUtils
     }
 
     static <E2> void debug(String action,
-                                  Traverser<E2> t)
+                           Traverser<E2> t)
     {
         EntityTraversalDsl.logger.debug(String.format("%s [%s]-[%s]-[%s]",
                                                       action,
@@ -139,7 +139,7 @@ public class EntityTraversalUtils
                                                       ((Element) t.get()).property("uuid")
                                                                          .orElse("null")));
     }
-    
+
     static <E2> void fetched(Traverser<E2> t)
     {
         debug("Fetched", t);
