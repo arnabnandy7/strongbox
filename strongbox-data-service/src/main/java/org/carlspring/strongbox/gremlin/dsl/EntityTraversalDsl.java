@@ -159,6 +159,14 @@ public interface EntityTraversalDsl<S, E> extends GraphTraversal.Admin<S, E>
                               .map(unfoldTraversal);
     }
 
+    /**
+     * Adds entity with specified `uuid`
+     *
+     * @param <S2>
+     * @param uuid entity `uuid`
+     * @param unfoldTraversal traversal to unfold the entity on graph
+     * @return entity vertex traversal
+     */
     default <S2> Traversal<S, Vertex> addV(Object uuid,
                                            UnfoldEntityTraversal<S2, Vertex> unfoldTraversal)
     {
@@ -174,18 +182,40 @@ public interface EntityTraversalDsl<S, E> extends GraphTraversal.Admin<S, E>
                           .sideEffect(EntityTraversalUtils::created);
     }
 
+    /**
+     * Logs traverser value labeled with action.
+     *
+     * @param <E2>
+     * @param action the action label
+     * @return current traversal
+     */
     @SuppressWarnings("unchecked")
     default <E2> Traversal<S, E2> info(String action)
     {
         return (Traversal<S, E2>) sideEffect(t -> EntityTraversalUtils.info(action, t));
     }
 
+    /**
+     * Logs traverser value labeled with action.
+     *
+     * @param <E2>
+     * @param action the action label
+     * @return current traversal
+     */
     @SuppressWarnings("unchecked")
     default <E2> Traversal<S, E2> debug(String action)
     {
         return (Traversal<S, E2>) sideEffect(t -> EntityTraversalUtils.debug(action, t));
     }
 
+    /**
+     * Sets the property value with {@link Cardinality#set}
+     *
+     * @param <E2>
+     * @param key property key
+     * @param values property value
+     * @return current traversal
+     */
     default <E2> GraphTraversal<S, E2> property(final String key,
                                                 final Set<String> values)
     {

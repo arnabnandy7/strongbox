@@ -2,9 +2,7 @@ package org.carlspring.strongbox.gremlin.dsl;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.time.LocalDateTime;
-import java.time.ZoneId;
 import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
@@ -19,6 +17,11 @@ import org.apache.tinkerpop.gremlin.structure.Property;
 import org.carlspring.strongbox.data.domain.DomainObject;
 import org.strongbox.util.Commons;
 
+/**
+ * Utility methods to work with {@link EntityTraversalDsl} traversals.
+ *
+ * @author sbespalov
+ */
 public class EntityTraversalUtils
 {
     public static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss.SSSXXX";
