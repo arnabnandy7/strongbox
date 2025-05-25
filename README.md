@@ -154,4 +154,7 @@ We'd also like to thank our sponsors for generously providing us with licenses f
 [yourkit-dotnet-profiler-link]: https://www.yourkit.com/.net/profiler
 [yourkit-monitor-link]: https://www.yourkit.com/youmonitor/
 
-<!-- GitAds-Verify: 8G7AWC4RRPK18NSW7Z57BCZRJVR4IMHD -->
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=arnabnandy7/strongbox@github)](https://gitads.dev/v1/ad-track?source=arnabnandy7/strongbox@github)
+
+
